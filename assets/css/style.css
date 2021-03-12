@@ -53,7 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 538px) {
   .back-to-top {
-    bottom: 15px;
+    bottom: 25px;
+    left: 20px;
   }
 }
 
@@ -134,6 +135,25 @@ h1, h2, h3, h4, h5, h6 {
 
 #header .logo a {
   color: #fff;
+}
+
+#header a::after {
+  position: absolute;
+  content: " ";
+  height: .1em;
+  top: 100%;
+  background: currentColor;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform .5s cubic-bezier(.95, .05, .795, .035);
+  color: rgba(13,128,55);
+}
+
+#header a:hover::after {
+  transition-timing-function: cubic-bezier(.19, 1, .22, 1);  
+  transform: scaleX(1);
 }
 
 #header .logo img {
@@ -837,7 +857,46 @@ section {
   color: #000;
 }
 
-/* Call To Action Section
+/* Call To Action Hotel Section
+--------------------------------*/
+#call-to-action-hotel {
+  background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)), url(../img/hotelmariot.jpg) fixed center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+#call-to-action-hotel h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#call-to-action-hotel p {
+  color: #fff;
+}
+
+#call-to-action-hotel .cta-btn {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#call-to-action-hotel .cta-btn:hover {
+  background: rgba(255, 237, 0, 0.7);
+  border: 2px solid #000;
+  color: #000;
+}
+
+/* Skills Section
 --------------------------------*/
 #skills {
   padding: 60px 0;
